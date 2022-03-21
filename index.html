@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="design.css" rel="stylesheet"/>
+    <script src=myscript.js defer></script>
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
-    <div class="board x">
-        <div class="board-cell x"></div>
-        <div class="board-cell o"></div>
-        <div class="board-cell"></div>
-        <div class="board-cell"></div>
-        <div class="board-cell"></div>
-        <div class="board-cell"></div>
-        <div class="board-cell"></div>
-        <div class="board-cell"></div>
-        <div class="board-cell"></div>
+    <div class="board" id="board">
+        <div class="board-cell" data-cell></div>
+        <div class="board-cell" data-cell></div>
+        <div class="board-cell" data-cell></div>
+        <div class="board-cell" data-cell></div>
+        <div class="board-cell" data-cell></div>
+        <div class="board-cell" data-cell></div>
+        <div class="board-cell" data-cell></div>
+        <div class="board-cell" data-cell></div>
+        <div class="board-cell" data-cell></div>
     </div>
-    <div class="winning-message show">
+    <div class="winning-message">
         <div class="winning-message-text">X Wins!</div>
         <button id="restart">Restart</button>
     </div>

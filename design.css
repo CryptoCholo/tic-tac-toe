@@ -59,6 +59,12 @@ body {
     cursor: not-allowed;
 }
 
+.board-cell.x::before,
+.board-cell.x::after,
+.board-cell.o::before {
+    background-color: black;
+}
+
 
 .board-cell.x::before,
 .board-cell.x::after,
@@ -67,12 +73,12 @@ body {
     content: "";
     width: calc(var(--mark-size) * .15);
     height: var(--mark-size);
-    background-color: black;
     position: absolute;
 }
 
 .board.x .board-cell:not(.x):not(.o):hover::before,
-.board.x .board-cell:not(.x):not(.o):hover::after {
+.board.x .board-cell:not(.x):not(.o):hover::after,
+.board.o .board-cell:not(.x):not(.o):hover::before {
     background-color: lightgray;
 }
 
@@ -100,12 +106,9 @@ body {
 .board.o .board-cell:not(.x):not(.o):hover::before {
     width: var(--mark-size);
     height: var(--mark-size);
-    background-color: black;
+   
 }
-
-.board.o .board-cell:not(.x):not(.o):hover::before {
-    background-color: lightgray;
-}
+ 
 
 .board-cell.o::after,
 .board.o .board-cell:not(.x):not(.o):hover::after {
